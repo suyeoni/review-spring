@@ -55,6 +55,7 @@ public class ThreadTest1 {
             while (true) {
                 shared.get();
                 try {
+                    // Thread sleep is static method, and doesn't release lock.
                     Thread.sleep(3000);
                 } catch (InterruptedException ignore) { }
             }
