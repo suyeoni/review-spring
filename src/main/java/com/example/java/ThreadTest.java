@@ -1,6 +1,6 @@
 package com.example.java;
 
-public class ThreadTest1 {
+public class ThreadTest {
     // static :: 상위 클래스와 상관없이 클래스를 선언하겠다
     static class SharedData {
         // shared

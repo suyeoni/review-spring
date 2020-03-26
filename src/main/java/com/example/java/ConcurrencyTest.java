@@ -1,6 +1,6 @@
 package com.example.java;
 
-public class ConcurrencyTest1 {
+public class ConcurrencyTest {
 
     static class SharedData {
         /*volatile*/ boolean flag = true;
