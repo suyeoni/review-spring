@@ -8,7 +8,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ConditionLockTest {
 
-    private Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock(); // default is fairness : true
+    //    private Lock lock = new ReentrantLock(false); // fairness : false
     private Condition condition = lock.newCondition();
 
     private void thread1() {
