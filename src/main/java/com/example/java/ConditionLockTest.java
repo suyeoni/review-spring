@@ -2,6 +2,7 @@ package com.example.java;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -27,6 +28,21 @@ public class ConditionLockTest {
 //            condition.signalAll(); // like notifyAll()
         } catch (Exception ignore) { }
         lock.unlock(); // like synchronized block
+    }
+
+    private void thread3() {
+        try {
+            // lock.tryLock();
+            boolean available = lock.tryLock(3, TimeUnit.SECONDS);
+            if (available) {
+                // do something with shared data
+            } else {
+                // can't get a lock, but do something without shared data
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
     static class Shared {
