@@ -27,7 +27,11 @@ public class SpringPracticeApplicationForTest {
             c.close();
         }
         * */
-        try (ConfigurableApplicationContext c = SpringApplication.run(SpringPracticeApplicationForTest.class, args)) { }
+        try (ConfigurableApplicationContext c = SpringApplication.run(SpringPracticeApplicationForTest.class, args)) {
+
+        } catch (Exception e) {
+
+        }
     }
 
     // bean으로 command line runner 선언

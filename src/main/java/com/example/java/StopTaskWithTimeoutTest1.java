@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class StopTaskWithTimeoutTest1 {
-    static class TaskWithVolatile implements Runnable {
+    static class TaskWithVolatile implements Runnable { //쓰 지 마
         private volatile boolean keepRunning = true;
 
         @Override
